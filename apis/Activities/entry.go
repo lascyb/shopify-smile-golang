@@ -1,6 +1,6 @@
 package Activities
 
-import "smile/contract"
+import "github.com/lascyb/shopify-smile-golang/contract"
 
 type Activities struct {
 	client contract.SmileClient

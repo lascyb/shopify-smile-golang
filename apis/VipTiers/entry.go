@@ -1,6 +1,6 @@
 package VipTiers
 
-import "smile/contract"
+import "github.com/lascyb/shopify-smile-golang/contract"
 
 type VipTiers struct {
 	client contract.SmileClient

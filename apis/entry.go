@@ -1,16 +1,16 @@
 package apis
 
 import (
-	"smile/apis/Activities"
-	"smile/apis/CustomerIdentities"
-	"smile/apis/Customers"
-	"smile/apis/EarningRules"
-	"smile/apis/PointsProducts"
-	"smile/apis/PointsSettings"
-	"smile/apis/PointsTransactions"
-	"smile/apis/RewardFulfillments"
-	"smile/apis/VipTiers"
-	"smile/contract"
+	"github.com/lascyb/shopify-smile-golang/apis/Activities"
+	"github.com/lascyb/shopify-smile-golang/apis/CustomerIdentities"
+	"github.com/lascyb/shopify-smile-golang/apis/Customers"
+	"github.com/lascyb/shopify-smile-golang/apis/EarningRules"
+	"github.com/lascyb/shopify-smile-golang/apis/PointsProducts"
+	"github.com/lascyb/shopify-smile-golang/apis/PointsSettings"
+	"github.com/lascyb/shopify-smile-golang/apis/PointsTransactions"
+	"github.com/lascyb/shopify-smile-golang/apis/RewardFulfillments"
+	"github.com/lascyb/shopify-smile-golang/apis/VipTiers"
+	"github.com/lascyb/shopify-smile-golang/contract"
 )
 
 type Apis struct {

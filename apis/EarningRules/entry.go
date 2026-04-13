@@ -1,6 +1,6 @@
 package EarningRules
 
-import "smile/contract"
+import "github.com/lascyb/shopify-smile-golang/contract"
 
 type EarningRules struct {
 	client contract.SmileClient

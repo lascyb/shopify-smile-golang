@@ -11,9 +11,9 @@ import (
 	"strings"
 	"time"
 
-	"smile/apis"
+	"github.com/lascyb/shopify-smile-golang/apis"
 
-	"smile/options"
+	"github.com/lascyb/shopify-smile-golang/options"
 )
 
 // Client Smile REST 客户端；baseURL 来自 options（默认 https://api.smile.io）。

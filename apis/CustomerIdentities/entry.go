@@ -1,6 +1,6 @@
 package CustomerIdentities
 
-import "smile/contract"
+import "github.com/lascyb/shopify-smile-golang/contract"
 
 type CustomerIdentities struct {
 	client contract.SmileClient

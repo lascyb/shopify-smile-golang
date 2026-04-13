@@ -1,6 +1,6 @@
 package PointsSettings
 
-import "smile/contract"
+import "github.com/lascyb/shopify-smile-golang/contract"
 
 type PointsSettings struct {
 	client contract.SmileClient

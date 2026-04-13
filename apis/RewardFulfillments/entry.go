@@ -1,6 +1,6 @@
 package RewardFulfillments
 
-import "smile/contract"
+import "github.com/lascyb/shopify-smile-golang/contract"
 
 type RewardFulfillments struct {
 	client contract.SmileClient

@@ -25,7 +25,7 @@ func main() {
 	client, err := smile.NewClient(
 		"your_private_api_key",
 		options.WithBaseURL("https://api.smile.io"),
-		options.WithRateLimitRetry(2, 0),
+		options.WithRateLimitRetry(3),
 	)
 	if err != nil {
 		panic(err)

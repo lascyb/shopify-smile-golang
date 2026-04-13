@@ -65,8 +65,8 @@ func WithHttpClient(httpClient *http.Client) Option {
 	}
 }
 
-// WithRateLimitRetry 启用 HTTP 429 限流自动重试；maxRetries 为最大重试次数，backoff 为基础退避间隔（实际等待 = backoff * attempt）。
-func WithRateLimitRetry(maxRetries int, backoff time.Duration) Option {
+// WithRateLimitRetry 启用 HTTP 429 限流自动重试；maxRetries 为最大重试次数
+func WithRateLimitRetry(maxRetries int) Option {
 	return func(c *Config) {
 		if c == nil {
 			return

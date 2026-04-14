@@ -3,6 +3,7 @@ package Activities
 import (
 	"context"
 	"fmt"
+	"time"
 )
 
 const pathActivitiesV1 = "/v1/activities"
@@ -16,13 +17,13 @@ type CreateActivityInput struct {
 }
 
 type Activity struct {
-	ID                int64   `json:"id"`
-	CustomerID        int64   `json:"customer_id"`
-	Token             string  `json:"token"`
-	DistinctID        *string `json:"distinct_id"`
-	CreatedOnOriginAt *string `json:"created_on_origin_at"`
-	CreatedAt         string  `json:"created_at"`
-	UpdatedAt         string  `json:"updated_at"`
+	ID                int64     `json:"id"`
+	CustomerID        int64     `json:"customer_id"`
+	Token             string    `json:"token"`
+	DistinctID        *string   `json:"distinct_id"`
+	CreatedOnOriginAt *string   `json:"created_on_origin_at"`
+	CreatedAt         time.Time `json:"created_at"`
+	UpdatedAt         time.Time `json:"updated_at"`
 }
 
 type createActivityRequest struct {

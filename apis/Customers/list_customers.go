@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"net/url"
 	"strconv"
+	"time"
 )
 
 const pathCustomersV1 = "/v1/customers"
@@ -32,16 +33,16 @@ type Customer struct {
 	ReferralURL   string  `json:"referral_url"`
 	VipTierID     *int64  `json:"vip_tier_id"`
 	VipStatus     *struct {
-		VipTierID            *int64   `json:"vip_tier_id"`
-		VipTierExpiresAt     *string  `json:"vip_tier_expires_at"`
-		ProgressValue        *float64 `json:"progress_value"`
-		CurrentVipPeriodEnd  *string  `json:"current_vip_period_end"`
-		DeltaToRetainVipTier *float64 `json:"delta_to_retain_vip_tier"`
-		NextVipTierID        *int64   `json:"next_vip_tier_id"`
-		DeltaToNextVipTier   *float64 `json:"delta_to_next_vip_tier"`
+		VipTierID            *int64     `json:"vip_tier_id"`
+		VipTierExpiresAt     *time.Time `json:"vip_tier_expires_at"`
+		ProgressValue        *float64   `json:"progress_value"`
+		CurrentVipPeriodEnd  *time.Time `json:"current_vip_period_end"`
+		DeltaToRetainVipTier *float64   `json:"delta_to_retain_vip_tier"`
+		NextVipTierID        *int64     `json:"next_vip_tier_id"`
+		DeltaToNextVipTier   *float64   `json:"delta_to_next_vip_tier"`
 	} `json:"vip_status,omitempty"`
-	CreatedAt string `json:"created_at"`
-	UpdatedAt string `json:"updated_at"`
+	CreatedAt time.Time `json:"created_at"`
+	UpdatedAt time.Time `json:"updated_at"`
 }
 
 // PaginationMetadata 分页元数据。

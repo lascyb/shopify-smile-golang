@@ -4,6 +4,7 @@ package PointsTransactions
 import (
 	"context"
 	"fmt"
+	"time"
 )
 
 const pathPointsTransactionsV1 = "/v1/points_transactions"
@@ -18,13 +19,13 @@ type CreatePointsTransactionInput struct {
 
 // PointsTransaction Smile 返回的积分交易对象。
 type PointsTransaction struct {
-	ID           int64   `json:"id"`
-	CustomerID   int64   `json:"customer_id"`
-	PointsChange int     `json:"points_change"`
-	Description  *string `json:"description"`
-	InternalNote *string `json:"internal_note"`
-	CreatedAt    string  `json:"created_at"`
-	UpdatedAt    string  `json:"updated_at"`
+	ID           int64     `json:"id"`
+	CustomerID   int64     `json:"customer_id"`
+	PointsChange int       `json:"points_change"`
+	Description  *string   `json:"description"`
+	InternalNote *string   `json:"internal_note"`
+	CreatedAt    time.Time `json:"created_at"`
+	UpdatedAt    time.Time `json:"updated_at"`
 }
 
 type createPointsTransactionRequest struct {

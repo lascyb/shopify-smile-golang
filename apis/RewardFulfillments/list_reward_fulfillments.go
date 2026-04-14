@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"net/url"
 	"strconv"
+	"time"
 )
 
 const pathRewardFulfillmentsV1 = "/v1/reward_fulfillments"
@@ -19,21 +20,21 @@ type ListRewardFulfillmentsInput struct {
 }
 
 type RewardFulfillment struct {
-	ID                 int64   `json:"id"`
-	Name               string  `json:"name"`
-	Code               string  `json:"code"`
-	CustomerID         int64   `json:"customer_id"`
-	FulfillmentStatus  string  `json:"fulfillment_status"`
-	ImageURL           string  `json:"image_url"`
-	ActionText         *string `json:"action_text"`
-	ActionURL          *string `json:"action_url"`
-	UsageInstructions  *string `json:"usage_instructions"`
-	TermsAndConditions *string `json:"terms_and_conditions"`
-	ExpiresAt          *string `json:"expires_at"`
-	UsageStatus        string  `json:"usage_status"`
-	UsedAt             *string `json:"used_at"`
-	CreatedAt          string  `json:"created_at"`
-	UpdatedAt          string  `json:"updated_at"`
+	ID                 int64     `json:"id"`
+	Name               string    `json:"name"`
+	Code               string    `json:"code"`
+	CustomerID         int64     `json:"customer_id"`
+	FulfillmentStatus  string    `json:"fulfillment_status"`
+	ImageURL           string    `json:"image_url"`
+	ActionText         *string   `json:"action_text"`
+	ActionURL          *string   `json:"action_url"`
+	UsageInstructions  *string   `json:"usage_instructions"`
+	TermsAndConditions *string   `json:"terms_and_conditions"`
+	ExpiresAt          *string   `json:"expires_at"`
+	UsageStatus        string    `json:"usage_status"`
+	UsedAt             *string   `json:"used_at"`
+	CreatedAt          time.Time `json:"created_at"`
+	UpdatedAt          time.Time `json:"updated_at"`
 }
 
 type PaginationMetadata struct {
